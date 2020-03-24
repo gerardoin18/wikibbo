@@ -1,0 +1,73 @@
+{% comment %} ----------------------------------------------------------------------------- Hey there! This is the markup for the While Supplies Last scarcity banner. If you need to make markup or styling changes, then this is the spot. If you have questions
+please don't hesitate to contact us. We'll reply within one business day. https://ethercycle.com/while-supplies-last/support/ ----------------------------------------------------------------------------- {% endcomment %} {% assign shopData = shop.metafields.while-supplies-last
+%} {% assign prodData = product.metafields.while-supplies-last %} {% capture buySoonMessageOrig %}{{prodData.buy_soon_message}}{% endcapture %} {% if buySoonMessageOrig == blank %} {% capture buySoonMessageOrig %}{{shopData.buy_soon_message}}{% endcapture
+%} {% endif %} {% capture buySoonMessageWithItemInCartsOrig %}{{prodData.buy_soon_message_in_carts}}{% endcapture %} {% if buySoonMessageWithItemInCartsOrig == blank %} {% capture buySoonMessageWithItemInCartsOrig %}{{shopData.buy_soon_message_in_carts}}{%
+endcapture %} {% endif %} {% capture buySoonMessageForVariants %}{{prodData.buy_soon_message_for_variants}}{% endcapture %} {% if buySoonMessageForVariants == blank %} {% capture buySoonMessageForVariants %}{{shopData.buy_soon_message_for_variants}}{%
+endcapture %} {% endif %} {% capture individualVariantMessage %}{{prodData.variant_message}}{% endcapture %} {% if individualVariantMessage == blank %} {% capture individualVariantMessage %}{{shopData.variant_message}}{% endcapture %} {% endif %} {% capture
+individualVariantMessageWithItemInCarts %}{{prodData.variant_message_in_carts}}{% endcapture %} {% if individualVariantMessageWithItemInCarts == blank %} {% capture individualVariantMessageWithItemInCarts %}{{shopData.variant_message_in_carts}}{% endcapture
+%} {% endif %} {% capture quantityThreshold %}{{prodData.quantity_threshold}}{% endcapture %} {% if quantityThreshold == blank or quantityThreshold == "0" %} {% capture quantityThreshold %}{{shopData.quantity_threshold}}{% endcapture %} {% endif %} {%
+assign quantityThreshold = quantityThreshold | plus: 0 %} {% capture fontColor %}{{prodData.font_color}}{% endcapture %} {% if fontColor == blank %} {% capture fontColor %}{{shopData.font_color}}{% endcapture %} {% endif %} {% capture fontSize %}{{prodData.font_size}}{%
+endcapture %} {% if fontSize == blank %} {% capture fontSize %}{{shopData.font_size}}{% endcapture %} {% endif %} {% capture styleString %}{% if fontSize != blank %}font-size:{{fontSize}};{% endif %}{% endcapture %} {% capture styleString %}{{styleString}}{%
+if fontColor != blank %}color:{{fontColor}};{% endif %}{% endcapture %} {% if product.variants.size > 1 %} {% assign variantList = '' %} {% assign variantCount = 0 %} {% for variant in product.variants %} {% assign inventoryManagement = variant.inventory_management
+%} {% assign inventoryCount = variant.inventory_quantity %} {% assign numberInCart = variant.metafields.while-supplies-last.cart_items_quantity | plus: 0 %} {% if inventoryCount
+<=q uantityThreshold and inventoryCount> 0 and inventoryManagement == 'shopify' %} {% if numberInCart != blank and numberInCart > 0 %} {% capture variantList%}{{variantList}}
+    <li>
+        {{ individualVariantMessageWithItemInCarts | replace: "$number$", inventoryCount | replace: "$variant$", variant.title | replace: "$cart_number$", numberInCart }}
+    </li>
+    {% endcapture %} {% else %} {% capture variantList%}{{variantList}}
+    <li>
+        {{ individualVariantMessage | replace: "$number$", inventoryCount | replace: "$variant$", variant.title }}
+    </li>
+    {% endcapture %} {% endif %} {% assign variantCount = variantCount | plus: 1 %} {% endif %} {% endfor %} {% if variantList != '' %}
+    <script>
+        function toggledisplay(elementID) {
+            var elements = document.getElementsByClassName(elementID);
+            for (var i = 0; i < elements.length; i++) {
+                element = elements[i];
+                element.classList.toggle("active");
+            }
+        }
+    </script>
+    <div id="wsl-variants-{{product.id}}" class="while-supplies-last wsl-variants-{{product.id}}" style="{{styleString}}padding:10px 0px;" onClick="toggledisplay('wsl-variants-{{product.id}}');">
+        {{buySoonMessageForVariants}}
+        <div class="list">
+            <ul style="{{styleString}}line-height=1.2em;">
+                {{variantList}}
+            </ul>
+        </div>
+    </div>
+    <style type="text/css">
+        .while-supplies-list {
+            position: relative;
+        }
+        
+        .while-supplies-last .list {
+            max-height: 0;
+            transition: max-height 0.25s ease-out;
+            overflow: hidden;
+        }
+        
+        .while-supplies-last.active .list {
+            max-height: {
+                {
+                    variantCount | times: 3 | plus: 3
+                }
+            }
+            em;
+            transition: max-height 0.25s ease-in;
+        }
+        
+        .while-supplies-last.active .list ul li {
+            margin: 0px;
+            padding: 0px;
+            line-height: 1.5em;
+        }
+    </style>
+    {% endif %} {% else %} {% assign replacementText = '' %} {% assign variant = product.variants[0] %} {% assign inventoryManagement = variant.inventory_management %} {% assign inventoryCount = variant.inventory_quantity %} {% assign numberInCart = variant.metafields.while-supplies-last.cart_items_quantity
+    | plus: 0 %} {% if inventoryCount
+    <=q uantityThreshold and inventoryCount> 0 and inventoryManagement == 'shopify' %} {% capture replacementText%}{{inventoryCount}}{% endcapture %} {% endif %} {% if replacementText != '' %} {% if numberInCart != blank and numberInCart > 0 %} {% capture buySoonMessage %}{{ buySoonMessageWithItemInCartsOrig
+        | replace: "$number$", replacementText | replace: "$cart_number$", numberInCart }}{% endcapture %} {% else %} {% capture buySoonMessage %}{{ buySoonMessageOrig | replace: "$number$", replacementText}}{% endcapture %} {% endif %}
+        <div class="while-supplies-last" style="{{styleString}}padding:10px 0px;">
+            {{buySoonMessage}}
+        </div>
+        {% endif %} {% endif %}

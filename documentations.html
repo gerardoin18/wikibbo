@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="icon" href="assets/img/basic/favicon.ico" type="image/x-icon" />
+    <title>Paper</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/app.css" />
+    <style>
+        .loader {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #f5f8fa;
+            z-index: 9998;
+            text-align: center;
+        }
+        
+        .plane-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Pre loader -->
+    <div id="loader" class="loader">
+        <div class="plane-container">
+            <div class="l-s-2 blink">LOADING</div>
+        </div>
+    </div>
+
+    <div id="app" class="paper-loading">
+        <main class="page">
+            <!-- Header -->
+            <nav class="mainnav navbar navbar-default justify-content-between">
+                <div class="container relative">
+                    <a class="offcanvas dl-trigger paper-nav-toggle" data-toggle="offcanvas" aria-expanded="false" aria-label="Toggle navigation">
+                        <i></i>
+                    </a>
+                    <a class="navbar-brand" href="index.html">
+                        <img class="d-inline-block align-top" alt="" src="assets/img/basic/logo.png" />
+                    </a>
+                    <div class="paper_menu">
+                        <div id="dl-menu" class="xv-menuwrapper responsive-menu">
+                            <ul class="dl-menu align-items-center">
+                                <li><a href="#">Home</a></li>
+                                <li class="parent">
+                                    <a href="#">Pages</a>
+                                    <ul class="lg-submenu">
+                                        <li><a href="home2.html">Home Page 2</a></li>
+                                        <li><a href="single.html">Knowledgebase Single</a></li>
+                                        <li><a href="404.html">404 Page</a></li>
+                                        <li><a href="documentations.html">Documentation</a></li>
+                                        <li>
+                                            <a href="password-recovery.html">Forgot Password</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="parent">
+                                    <a href="#">Blog</a>
+                                    <ul class="lg-submenu" style="width: 300px">
+                                        <li class="p-0">
+                                            <div class="p-4">
+                                                <div class="my-3">
+                                                    <a href="blog.html">
+                                                        <div class="media">
+                                                            <i class="icon-circle-o w-20 s-36 text-primary"></i>
+                                                            <div class="media-body">
+                                                                <span class="mt-0 mb-0 font-weight-normal s-12">Paper Blog<br
+                                  /></span>
+                                                                <span class="s-12">Simple Blog Layout</span>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="my-3">
+                                                    <a href="single.html">
+                                                        <div class="media">
+                                                            <i class="icon-circle-o w-20 s-36 text-warning"></i>
+                                                            <div class="media-body">
+                                                                <span class="mt-0 mb-0 font-weight-normal s-12">Blog Single<br
+                                  /></span>
+                                                                <span class="s-12">Blog Details Page</span>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="my-3">
+                                                    <a href="single2.html">
+                                                        <div class="media">
+                                                            <i class="icon-circle-o w-20 s-36 text-info"></i>
+                                                            <div class="media-body">
+                                                                <span class="mt-0 mb-0 font-weight-normal s-12">Blog Single 2<br
+                                  /></span>
+                                                                <span class="s-12"> A Post Style</span>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="light p-5">
+                                                <h6>Mega Menu</h6>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci architecto autem.
+                                                </p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="login.html">
+                      Login
+                    </a>
+                                </li>
+                                <li>
+                                    <a href="register.html" class="btn btn-default nav-btn">Sign Up</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <!-- Login modal -->
+            </div>
+          </div>
+        </nav>
+        <div class="search-section">
+          <div class="container">
+            <h1>
+              Documentations
+              <small>version: 1.0</small>
+            </h1>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3">
+              <aside class="main-sidebar ">
+                <div class="">
+                  <section class="sidebar p-t-b-40">
+                    <ul class="sidebar-menu scroll">
+                      <li class="treeview">
+                        <a href="#">
+                          <i class="icon icon-folders"></i>
+                          <span>Snippets</span>
+                        </a>
+                                    <ul class="treeview-menu">
+                                        <li>
+                                            <a href="#navbar"><i class="icon icon-folder5"></i>Navbar</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#perks"
+                              ><i class="icon icon-folder5"></i>Perks</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#rewards"
+                              ><i class="icon icon-folder5"></i>Rewards</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#ingredients"
+                              ><i class="icon icon-folder5"></i>Ingredients</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#joinchallenge"
+                              ><i class="icon icon-folder5"></i>Join 30 day
+                              challenge</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#made-woc"
+                              ><i class="icon icon-folder5"></i>Made for
+                              W.O.C</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#kinkyproducts"
+                              ><i class="icon icon-folder5"></i>Kinky
+                              Products</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#review-testimonial"
+                              ><i class="icon icon-folder5"></i>Reviews and
+                              testimonials</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#results"
+                              ><i class="icon icon-folder5"></i>Results</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#product-tutorial"
+                              ><i class="icon icon-folder5"></i>Product
+                              Tutorial</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#shop-now"
+                              ><i class="icon icon-folder5"></i>Shop Now</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#green-text"
+                              ><i class="icon icon-folder5"></i>Green Text and
+                              image</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#brown-text"
+                              ><i class="icon icon-folder5"></i>Brown text and
+                              image</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#recommended-regimen"
+                              ><i class="icon icon-folder5"></i>Recommended
+                              Regimen</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#shop-deal"
+                              ><i class="icon icon-folder5"></i>Shop the Deal</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#porosity-structure"
+                              ><i class="icon icon-folder5"></i>Get your
+                              porosity/structure</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#footer"
+                              ><i class="icon icon-folder5"></i>Footer</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#recommended-products"
+                              ><i class="icon icon-folder5"></i>Recommended
+                              products</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#shop-haircare"
+                              ><i class="icon icon-folder5"></i>Shop Haircare</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#features"
+                              ><i class="icon icon-folder5"></i>Features</a
+                            >
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </section>
+                </div>
+                <!-- /.sidebar -->
+              </aside>
+            </div>
+            <article class="col-md-9 p-b-40 b-l p-40">
+              <section id="introduction">
+                <div class="row"></div>
+              </section>
+              <section id="structure" class="">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="table-responsive"></div>
+                  </div>
+                </div>
+                <section id="partials">
+                  <div class="row"></div>
+                </section>
+              </section>
+
+              <section id="navbar">
+                <h3>Navbar</h3>
+                <div class="alert alert-info">
+                  <img src="/assets/img/wiki/navbar.png" alt="" width="100%" />
+                  <script src="https://gist.github.com/gerardoin18/441d676f70bce715e84ca4b11c5c261e.js"></script>
+                </div>
+              </section>
+
+              <section id="perks">
+                <h3>Perks</h3>
+                <div class="alert alert-info">
+                  <img src="/assets/img/wiki/perks.png" alt="" / width="100%"
+                  max-width="1080px">
+                  <script src="https://gist.github.com/alejandrogalaviz/16fdb15b3d0fe4f47e719df1bc45262f.js"></script>
+                </div>
+              </section>
+
+              <section id="rewards">
+                <h3>Rewards</h3>
+                <div class="alert alert-info">
+                  <img src="/assets/img/wiki/rewards.png" alt="" width="100%" />
+                  <script src="https://gist.github.com/gerardoin18/8faa5c483a693f01940f07bb953cf219.js"></script>
+                </div>
+              </section>
+
+              <section id="ingredients">
+                <h3>Ingredients</h3>
+                <div class="alert alert-info">
+                  <img
+                    src="/assets/img/wiki/ingredients.png"
+                    alt=""
+                    width="100%"
+                  />
+                  <script src="https://gist.github.com/gerardoin18/49c4ba21c07e2441faf403d9c6af6f47.js"></script>
+                </div>
+              </section>
+
+              <section id="joinchallenge">
+                <h3>Join 30 Day Challenge</h3>
+                <div class="alert alert-info">
+                  <img src="/assets/img/wiki/join30challenge.png" alt="" /
+                  width="100%">
+                  <script src="https://gist.github.com/gerardoin18/f72877b2e36907af8c735d69fbf2992f.js"></script>
+                </div>
+              </section>
+
+              <section id="made-woc">
+                <h3>Made For W.O.C</h3>
+                <div class="alert alert-info">
+                  <img src="/assets/img/wiki/woc.png" alt="" width="100%" />
+                  <script src="https://gist.github.com/gerardoin18/e3a76f7b6ffaf7cc74930ab6340207ed.js"></script>
+                </div>
+              </section>
+
+              <section id="kinkyproducts">
+                <h3>Kinky Products</h3>
+                <div class="alert alert-info">
+                  <img
+                    src="/assets/img/wiki/kinkyproducts.png"
+                    alt=""
+                    width="100%"
+                  />
+                  <script src="https://gist.github.com/gerardoin18/08ca37e031047cd7f5c376282a027a6a.js"></script>
+                </div>
+              </section>
+
+              <section id="review-testimonial">
+                <h3>Review and testimonials</h3>
+                <div class="alert alert-info">
+                  <img
+                    src="/assets/img/wiki/review-testimonials.png"
+                    alt=""
+                    width="100%"
+                  />
+                  <script src="https://gist.github.com/gerardoin18/915cc450759800260ce2060ea2d7d75d.js"></script>
+                </div>
+              </section>
+
+              <section id="results">
+                <h3>Results</h3>
+                <div class="alert alert-info">
+                  <img src="/assets/img/wiki/results.png" alt="" width="100%" />
+                  <script src="https://gist.github.com/gerardoin18/d57ac616e4cfdb7e34e7cd6ec9371d6b.js"></script>
+                </div>
+              </section>
+
+              <section id="product-tutorial">
+                <h3>Product tutorial</h3>
+                <div class="alert alert-info">
+                  <img
+                    src="/assets/img/wiki/product-tutorial.png"
+                    alt=""
+                    width="100%"
+                  />
+                  <script src="https://gist.github.com/gerardoin18/92cfeaea21539ae7d7a47329062515c7.js"></script>
+                </div>
+              </section>
+
+              <section id="shop-now">
+                <h3>Shop Now</h3>
+                <div class="alert alert-info">
+                  <img src="/assets/img/wiki/shopnow.png" alt="" width="100%" />
+                  <script src="https://gist.github.com/gerardoin18/c341f2f350438d4af4adf1b98ce5ff2c.js"></script>
+                </div>
+              </section>
+
+              <section id="green-text">
+                <h3>Green background text with image</h3>
+                <div class="alert alert-info">
+                  <img src="/assets/img/wiki/greenbgtextwithimage.png" alt="" />
+                  <script src="https://gist.github.com/gerardoin18/72b14ce4d0ae1c1532a739984f186b1e.js"></script>
+                </div>
+              </section>
+
+              <section id="brown-text">
+                <h3>Brown background text with image</h3>
+                <div class="alert alert-info">
+                  <img src="/assets/img/wiki/brownbg-withimage.png" alt="" />
+                  <script src="https://gist.github.com/gerardoin18/d7ff27754fa12e1c7b91d3325699eab2.js"></script>
+                </div>
+              </section>
+
+              <section id="recommended-regimen">
+                <h3>Recommended Regimen</h3>
+                <div class="alert alert-info">
+                  <img
+                    src="/assets/img/wiki/recommended-regimen.png"
+                    alt=""
+                    width="100%"
+                  />
+                  <script src="https://gist.github.com/gerardoin18/a6f9a3ecf06975fcab745597228ff102.js"></script>
+                </div>
+              </section>
+
+              <section id="shop-deal">
+                <h3>Shop the Deal</h3>
+                <div class="alert alert-info">
+                  <img
+                    src="/assets/img/wiki/shop-the-deal.png"
+                    alt=""
+                    width="100%"
+                  />
+                  <script src="https://gist.github.com/gerardoin18/57a52aed6fa1967e31d034c93c246a67.js"></script>
+                </div>
+              </section>
+
+              <section id="porosity-structure">
+                <h3>Get Porosity structure</h3>
+                <div class="alert alert-info">
+                  <img
+                    src="/assets/img/wiki/getporosity.png"
+                    alt=""
+                    width="100%"
+                  />
+                  <script src="https://gist.github.com/gerardoin18/b53a40c1ab619c437103eb3c164e3545.js"></script>
+                </div>
+              </section>
+
+              <section id="footer">
+                <h3>Footer</h3>
+                <div class="alert alert-info">
+                  <img src="/assets/img/wiki/footer.png" alt="" />
+                  <script src="https://gist.github.com/gerardoin18/a2890f440440a5d3039efecd123ee881.js"></script>
+                </div>
+              </section>
+
+              <section id="recommended-products">
+                <h3>Recommended products</h3>
+                <div class="alert alert-info">
+                  <img src="/assets/img/wiki/recommended-products.png" alt="" />
+                  <script src="https://gist.github.com/gerardoin18/376bf7504edfecd0e046d9ad61ff8209.js"></script>
+                </div>
+              </section>
+
+              <section id="shop-haircare">
+                <h3>Shop Haircare</h3>
+                <div class="alert alert-info">
+                  <img src="/assets/img/wiki/shop-haircare.png" alt="" />
+                  <script src="https://gist.github.com/gerardoin18/6bfcebde3cf795372e817dbcfe150afa.js"></script>
+                </div>
+              </section>
+
+              <section id="features">
+                <h3>Features In</h3>
+                <div class="alert alert-info">
+                  <img src="/assets/img/wiki/featuresin.png" alt="" />
+                  <script src="https://gist.github.com/gerardoin18/67a5a3da60a396f00fe35b673f358173.js"></script>
+                </div>
+              </section>
+            </article>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class=" col-lg-2 col-xl-3 col-12 responsive-phone">
+              <a href="#" class="brand">
+                <img src="assets/img/basic/logo.png" alt="Knowledge" />
+                <span class="circle"></span>
+              </a>
+                        </div>
+                        <div class="col-6  col-md-4 col-lg-2">
+                            <h6>Quick Links</h6>
+                            <ul class="footer-links">
+                                <li><a href="#">Features</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Community</a></li>
+                                <li><a href="login.html">Login</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6  col-md-4 col-lg-2">
+                            <h6>Knowledgebase</h6>
+                            <ul class="footer-links">
+                                <li><a href="#">Features</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Community</a></li>
+                                <li><a href="login.html">Login</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6  col-md-4 col-lg-2">
+                            <h6>About Us</h6>
+                            <ul class="footer-links">
+                                <li><a href="#">Features</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Community</a></li>
+                                <li><a href="login.html">Login</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-md-12 col-12 col-xl-3 responsive-phone">
+                            <h6>Connect via Social</h6>
+                            <ul class="social">
+                                <li class="facebook">
+                                    <a href="#"><i class="icon icon-facebook"></i></a>
+                                </li>
+                                <li class="twitter">
+                                    <a href="#"><i class="icon icon-twitter"></i></a>
+                                </li>
+                                <li class="gplus">
+                                    <a href="#"><i class="icon icon-google-plus"></i></a>
+                                </li>
+                            </ul>
+                            <div class="copyrights">
+                                <p>&#xA9; 2018 Paper Knowledgebase Copyrights</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </footer>
+                <!-- Login modal -->
+                <div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="modalLogin">
+                    <div class="modal-dialog width-400" role="document">
+                        <div class="modal-content no-r ">
+                            <a href="#" data-dismiss="modal" aria-label="Close" class="paper-nav-toggle active"><i></i
+            ></a>
+                            <div class="modal-body no-p">
+                                <div class="text-center p-40 p-b-0">
+                                    <img src="assets/img/dummy/u4.png" alt="" />
+                                    <h3>Welcome Back</h3>
+                                    <p class="p-t-b-20">
+                                        Hey Soldier welcome back signin now there is lot of new stuff waiting for you
+                                    </p>
+                                </div>
+                                <div class="light p-40 b-t-b">
+                                    <form action="dashboard2.html">
+                                        <div class="form-group has-icon">
+                                            <i class="icon-envelope-o"></i>
+                                            <input type="text" class="form-control form-control-lg" placeholder="Email Address" />
+                                        </div>
+                                        <div class="form-group has-icon">
+                                            <i class="icon-user-secret"></i>
+                                            <input type="text" class="form-control form-control-lg" placeholder="Password" />
+                                        </div>
+                                        <input type="submit" class="btn btn-primary btn-lg btn-block" value="Log In" />
+                                        <small class="forget-pass">Have you forgot your username or password ?</small
+                  >
+                </form>
+              </div>
+              <div class="p-40">
+                <a href="#" class="btn btn-lg btn-block btn-social facebook">
+                  <i class="icon-facebook"></i> Login with Facebook
+                </a>
+                <a href="#" class="btn btn-lg btn-block btn-social twitter">
+                  <i class="icon-twitter"></i> Login with Twitter
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- SignUp modal -->
+      <div
+        class="modal fade"
+        id="modalSignUp"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="modalSignUp"
+      >
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content no-r ">
+            <a
+              href="#"
+              data-dismiss="modal"
+              aria-label="Close"
+              class="paper-nav-toggle active"
+              ><i></i
+            ></a>
+            <div class="modal-body no-p">
+              <div class="row">
+                <div class="col-lg-5 grid">
+                  <div class="p-40">
+                    <h5 class="p-t-40">Sign Up Using Social Account</h5>
+                    <p class="p-t-b-20">
+                      Hey Soldier welcome back signin now there is lot of new
+                      stuff waiting for you
+                    </p>
+                    <a
+                      href="#"
+                      class="btn btn-lg btn-block btn-social facebook"
+                    >
+                      <i class="icon-facebook"></i> Login with Facebook
+                    </a>
+                    <a href="#" class="btn btn-lg btn-block btn-social twitter">
+                      <i class="icon-twitter"></i> Login with Twitter
+                    </a>
+                  </div>
+                </div>
+                <div class="col-lg-7">
+                  <div class="light p-t-b-40">
+                    <div class="p-40">
+                      <h5 class="p-b-20">Create New User Account</h5>
+                      <form action="dashboard2.html ">
+                        <div class="form-group has-icon">
+                          <i class="icon-user-circle"></i>
+                          <input
+                            type="text"
+                            class="form-control form-control-lg"
+                            placeholder="Your Name"
+                          />
+                        </div>
+                        <div class="form-group has-icon">
+                          <i class="icon-envelope-o"></i>
+                          <input
+                            type="text"
+                            class="form-control form-control-lg"
+                            placeholder="Email Address"
+                          />
+                        </div>
+                        <div class="form-group has-icon">
+                          <i class="icon-user-secret"></i>
+                          <input
+                            type="text"
+                            class="form-control form-control-lg"
+                            placeholder="Password"
+                          />
+                        </div>
+                        <div class="form-group has-icon">
+                          <i class="icon-repeat"></i>
+                          <input
+                            type="text"
+                            class="form-control form-control-lg"
+                            placeholder="Confirm Password"
+                          />
+                        </div>
+                        <input
+                          type="submit"
+                          class="btn btn-primary btn-lg btn-block"
+                          value="Sign Up Now"
+                        />
+                        <p class="forget-pass">
+                          A verification email wil be sent to you
+                        </p>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--End Page page_wrrapper -->
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
